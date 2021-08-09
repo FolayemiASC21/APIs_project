@@ -20,7 +20,7 @@ function randomNumber(min, max) {
             if (gender.value == "male") {
                 profiles.innerHTML = " "
 
-                for (i = 50; i < 101; i++) {
+                for (i = 0; i < 101; i++) {
                     
                     if (myJson.results[i].gender == "male") {
 
@@ -30,14 +30,16 @@ function randomNumber(min, max) {
                         let imageURL = myJson.results[i].picture.large
                         let fullName = firstName + " " + lastName
 
+                        let div = document.createElement("div")
                         let image = document.createElement("img")
                         let text = document.createElement("p")
 
                         image.src = imageURL
                         text.innerHTML = "My name is " + fullName
                         
-                        profiles.appendChild(image)
-                        profiles.appendChild(text)
+                        div.appendChild(image)
+                        div.appendChild(text)
+                        profiles.appendChild(div)
                     }
                 }
             }
@@ -54,14 +56,16 @@ function randomNumber(min, max) {
                         let imageURL = myJson.results[i].picture.large
                         let fullName = firstName + " " + lastName
 
+                        let div = document.createElement("div")
                         let image = document.createElement("img")
                         let text = document.createElement("p")
 
                         image.src = imageURL
                         text.innerHTML = "My name is " + fullName
                         
-                        profiles.appendChild(image)
-                        profiles.appendChild(text)
+                        div.appendChild(image)
+                        div.appendChild(text)
+                        profiles.appendChild(div)
                     }
                 }
             }

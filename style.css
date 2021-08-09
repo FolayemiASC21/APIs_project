@@ -1,4 +1,14 @@
 #profiles {
-    /* display: flex; */
+    display: flex;
     border: 3px solid black;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#profiles div {
+    border: 3px solid black;
+}
+
+#profiles div img {
+    text-align: center;
 }
